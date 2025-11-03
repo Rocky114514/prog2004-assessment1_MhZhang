@@ -6,7 +6,7 @@ public class Appointment {
     private String patientName;
     private String patientMobile;
     private String timeSlot;
-    private HealthProfessional selectedDoctor; // HD 关键点：使用父类引用
+    private HealthProfessional selectedDoctor; // Use parent class reference
 
     public Appointment() {
     }
@@ -45,7 +45,7 @@ public class Appointment {
 
     @Override
     public String toString() {
-        // 调用 doctor 对象的 toString() 方法，这里会发生多态
+        // Calling the toString() method of the doctor object will result in polymorphism
         return "Patient: " + patientName + " (Mobile: " + patientMobile + ")\n" +
                 "  Time: " + timeSlot + "\n" +
                 "  With: " + selectedDoctor.toString();

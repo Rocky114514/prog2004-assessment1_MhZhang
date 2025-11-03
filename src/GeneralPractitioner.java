@@ -2,13 +2,13 @@
  * Represents a General Practitioner (GP), a specific type of HealthProfessional.
  */
 public class GeneralPractitioner extends HealthProfessional {
-    private boolean bulkBillingAvailable; // 独特的属性
+    private boolean bulkBillingAvailable; // Unique attributes
 
     /**
      * Default constructor.
      */
     public GeneralPractitioner() {
-        super(); // 调用父类的默认构造函数
+        super(); // Call the default constructor of the parent class
     }
 
     /**
@@ -20,7 +20,7 @@ public class GeneralPractitioner extends HealthProfessional {
      * @param bulkBillingAvailable True if bulk billing is available.
      */
     public GeneralPractitioner(int id, String name, String location, boolean bulkBillingAvailable) {
-        super(id, name, location); // 必须首先调用父类的构造函数
+        super(id, name, location); // The constructor of the parent class must be called first
         this.bulkBillingAvailable = bulkBillingAvailable;
     }
 

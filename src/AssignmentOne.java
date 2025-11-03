@@ -7,14 +7,14 @@ public class AssignmentOne {
         // --- Part 3 - Using classes and objects ---
         System.out.println("// Part 3 - Using classes and objects");
 
-        // 创建医生对象
+        // Create Doctor Object
         GeneralPractitioner gp1 = new GeneralPractitioner(101, "Dr. Alice", "Downtown Clinic", true);
         GeneralPractitioner gp2 = new GeneralPractitioner(102, "Dr. Bob", "Uptown Medical", false);
         GeneralPractitioner gp3 = new GeneralPractitioner(103, "Dr. Carol", "Suburb Health", true);
         Specialist specialist1 = new Specialist(201, "Dr. David", "City Heart Center", "Cardiology");
         Specialist specialist2 = new Specialist(202, "Dr. Eve", "General Hospital", "Neurology");
 
-        // 打印医生详情
+        // Print doctor details
         System.out.println("--- Health Professional Details ---");
         System.out.println(gp1);
         System.out.println(gp2);
@@ -28,10 +28,10 @@ public class AssignmentOne {
         // --- Part 5 - Collection of appointments ---
         System.out.println("// Part 5 - Collection of appointments");
 
-        // 声明一个 ArrayList 来存储预约
+        // Declare an ArrayList to store appointments
         ArrayList<Appointment> appointments = new ArrayList<>();
 
-        // 演示预约创建
+        // Demo appointment creation
         System.out.println("\n--- Making Appointments ---");
         createAppointment(appointments, "John Smith", "0411222333", "09:00", gp1);
         createAppointment(appointments, "Jane Doe", "0422333444", "09:30", gp2);
@@ -39,19 +39,19 @@ public class AssignmentOne {
         createAppointment(appointments, "Mary Jane", "0444555666", "11:00", specialist2);
         System.out.println("=> 4 new appointments have been created.");
 
-        // 打印现有预约
+        // Print existing appointments
         System.out.println("\n--- Printing Existing Appointments (Before Cancel) ---");
         printExistingAppointments(appointments);
 
-        // 演示取消预约
+        // Demo Cancel Appointment
         System.out.println("\n--- Cancelling an Appointment ---");
-        cancelBooking(appointments, "0422333444"); // 取消 Jane Doe 的预约
+        cancelBooking(appointments, "0422333444"); // Cancel Jane Doe's appointment
 
-        // 再次打印预约，展示更新后的列表
+        // Print the appointment again and display the updated list
         System.out.println("\n--- Printing Existing Appointments (After Cancel) ---");
         printExistingAppointments(appointments);
 
-        // 演示取消一个不存在的预约
+        // Demo to cancel a non-existent appointment
         System.out.println("\n--- Attempting to Cancel a Non-existent Appointment ---");
         cancelBooking(appointments, "0499999999");
 
@@ -92,7 +92,6 @@ public class AssignmentOne {
 
     /**
      * Part 5 Method: Cancels a booking using the patient's mobile number.
-     * HD 技巧: 使用 Iterator 是在遍历时安全删除元素的最佳实践。
      * @param appointmentList The list of appointments.
      * @param patientMobile The mobile number to search for and cancel.
      */
@@ -102,10 +101,10 @@ public class AssignmentOne {
         while (iterator.hasNext()) {
             Appointment currentAppointment = iterator.next();
             if (currentAppointment.getPatientMobile().equals(patientMobile)) {
-                iterator.remove(); // 安全删除
+                iterator.remove(); // safely remove
                 found = true;
                 System.out.println("Success: Appointment for mobile " + patientMobile + " has been cancelled.");
-                break; // 假设一个手机号只有一个预约，找到后即可退出
+                break; // Assuming a phone number only has one appointment, you can exit once you find it
             }
         }
 

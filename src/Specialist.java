@@ -2,7 +2,7 @@
  * Represents a Specialist, another specific type of HealthProfessional.
  */
 public class Specialist extends HealthProfessional {
-    private String specialty; // 独特的属性：专业领域
+    private String specialty; // Unique attribute: professional field
 
     public Specialist() {
         super();

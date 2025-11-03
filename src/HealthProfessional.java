@@ -5,7 +5,7 @@
 public class HealthProfessional {
     private int id;
     private String name;
-    private String clinicLocation; // 一个比“任意变量”更具体的通用属性
+    private String clinicLocation; // A more specific universal attribute than 'any variable'
 
     /**
      * Default constructor.
@@ -27,7 +27,6 @@ public class HealthProfessional {
     }
 
     // --- Getters and Setters ---
-    // HD技巧：使用IDE自动生成，展示你对封装的理解
     public int getId() {
         return id;
     }
@@ -53,8 +52,6 @@ public class HealthProfessional {
     }
 
     /**
-     * HD 技巧: 覆盖 toString() 方法而不是创建一个 print() 方法。
-     * 这更符合Java的最佳实践。
      * @return A string representation of the HealthProfessional object.
      */
     @Override
