@@ -1,5 +1,10 @@
 /**
- * Represents a Specialist, another specific type of HealthProfessional.
+ * File:       Specialist.java
+ * Author:     Minghe Zhang
+ * Student ID: 24833060
+ * Unit:       PROG2004 Object Oriented Programming
+ * Assessment: Assessment 1
+ * Date:       07 November 2025
  */
 public class Specialist extends HealthProfessional {
     private String specialty; // Unique attribute: professional field

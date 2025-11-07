@@ -1,5 +1,10 @@
 /**
- * Represents a General Practitioner (GP), a specific type of HealthProfessional.
+ * File:       GeneralPractitioner.java
+ * Author:     Minghe Zhang
+ * Student ID: 24833060
+ * Unit:       PROG2004 Object Oriented Programming
+ * Assessment: Assessment 1
+ * Date:       07 November 2025
  */
 public class GeneralPractitioner extends HealthProfessional {
     private boolean bulkBillingAvailable; // Unique attributes
